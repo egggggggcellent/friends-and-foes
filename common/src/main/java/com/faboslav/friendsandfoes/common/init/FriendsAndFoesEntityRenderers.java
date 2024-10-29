@@ -13,6 +13,7 @@ import net.minecraft.client.render.entity.EntityRenderers;
 public final class FriendsAndFoesEntityRenderers
 {
 	public static void registerEntityRenderers(RegisterEntityRenderersEvent event) {
+		event.register(FriendsAndFoesEntityTypes.BARNACLE.get(), BarnacleEntityRenderer::new);
 		event.register(FriendsAndFoesEntityTypes.COPPER_GOLEM.get(), CopperGolemEntityRenderer::new);
 		event.register(FriendsAndFoesEntityTypes.CRAB.get(), CrabEntityRenderer::new);
 		event.register(FriendsAndFoesEntityTypes.GLARE.get(), GlareEntityRenderer::new);

@@ -15,6 +15,9 @@ public final class FriendsAndFoesSoundEvents
 {
 	public static final ResourcefulRegistry<SoundEvent> SOUND_EVENTS = ResourcefulRegistries.create(Registry.SOUND_EVENT, FriendsAndFoes.MOD_ID);
 
+	public static final RegistryEntry<SoundEvent> ENTITY_BARNACLE_AMBIENT = registerSoundEvent("entity.barnacle.ambient");
+	public static final RegistryEntry<SoundEvent> ENTITY_BARNACLE_HURT = registerSoundEvent("entity.barnacle.hurt");
+	public static final RegistryEntry<SoundEvent> ENTITY_BARNACLE_DEATH = registerSoundEvent("entity.barnacle.death");
 	public static final RegistryEntry<SoundEvent> ENTITY_COPPER_GOLEM_DEATH = registerSoundEvent("entity.copper_golem.death");
 	public static final RegistryEntry<SoundEvent> ENTITY_COPPER_GOLEM_HEAD_SPIN = registerSoundEvent("entity.copper_golem.head_spin");
 	public static final RegistryEntry<SoundEvent> ENTITY_COPPER_GOLEM_HURT = registerSoundEvent("entity.copper_golem.hurt");

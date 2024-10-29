@@ -1,9 +1,6 @@
 package com.faboslav.friendsandfoes.common.mixin;
 
-import com.faboslav.friendsandfoes.common.entity.pose.CopperGolemEntityPose;
-import com.faboslav.friendsandfoes.common.entity.pose.CrabEntityPose;
-import com.faboslav.friendsandfoes.common.entity.pose.RascalEntityPose;
-import com.faboslav.friendsandfoes.common.entity.pose.TuffGolemEntityPose;
+import com.faboslav.friendsandfoes.common.entity.pose.*;
 import net.minecraft.entity.EntityPose;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
@@ -48,6 +45,15 @@ public final class AddCustomEntityPoseMixin
 		var entityPoses = new ArrayList<>(Arrays.asList(field_18083));
 		var lastEntityPose = entityPoses.get(entityPoses.size() - 1);
 		var nextEntityPoseIndex = lastEntityPose.ordinal();
+
+		for (BarnacleEntityPose entityPose : BarnacleEntityPose.values()) {
+			var newEntityPose = newEntityPose(
+				entityPose.getName(),
+				++nextEntityPoseIndex
+			);
+
+			entityPoses.add(newEntityPose);
+		}
 
 		for (CopperGolemEntityPose entityPose : CopperGolemEntityPose.values()) {
 			var newEntityPose = newEntityPose(

@@ -15,6 +15,7 @@ import net.minecraft.client.render.entity.model.EntityModelLayers;
 @Environment(EnvType.CLIENT)
 public final class FriendsAndFoesEntityModelLayers
 {
+	public static final EntityModelLayer BARNACLE_LAYER = new EntityModelLayer(FriendsAndFoes.makeID("barnacle"), "main");
 	public static final EntityModelLayer COPPER_GOLEM_LAYER = new EntityModelLayer(FriendsAndFoes.makeID("copper_golem"), "main");
 	public static final EntityModelLayer CRAB_LAYER = new EntityModelLayer(FriendsAndFoes.makeID("crab"), "main");
 	public static final EntityModelLayer GLARE_LAYER = new EntityModelLayer(FriendsAndFoes.makeID("glare"), "main");
@@ -26,6 +27,7 @@ public final class FriendsAndFoesEntityModelLayers
 	public static final EntityModelLayer WILDFIRE_LAYER = new EntityModelLayer(FriendsAndFoes.makeID("wildfire"), "main");
 
 	public static void registerEntityLayers(RegisterEntityLayersEvent event) {
+		event.register(BARNACLE_LAYER, BarnacleEntityModel::getTexturedModelData);
 		event.register(COPPER_GOLEM_LAYER, CopperGolemEntityModel::getTexturedModelData);
 		event.register(CRAB_LAYER, CrabEntityModel::getTexturedModelData);
 		event.register(GLARE_LAYER, GlareEntityModel::getTexturedModelData);
