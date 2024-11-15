@@ -1,3 +1,17 @@
+## 3.0.6
+
+- Fixed strong potion of reaching duration
+- Fixed iceologer model
+- Fixed carpet profiler incompatibility
+- Fixed aether dungeons incompatibility
+- Fixed buttercup not being compostable
+- Added more config options
+- Added zh_tw translations (Thanks to Lobster0228)
+- Added fr_fr translations (Thanks to Franco227)
+- Added pt_br translations (Thanks to demorogabrtz)
+- Updated advancements
+- Updated uk_ua translations (Thanks to unroman)
+
 ## 3.0.5
 
 - Fixed server crash
