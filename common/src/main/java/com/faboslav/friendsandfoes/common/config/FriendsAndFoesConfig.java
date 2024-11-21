@@ -79,6 +79,16 @@ public final class FriendsAndFoesConfig
 	public int copperGolemAncientCityCenterWeight = 10;
 
 	@SerialEntry()
+	@AutoGen(category = MOBS_CATEGORY, group = COPPER_GOLEM_GROUP)
+	@Boolean(formatter = Boolean.Formatter.YES_NO, colored = true)
+	public boolean enableCopperGolemsInTrialChambers = true;
+
+	@SerialEntry()
+	@AutoGen(category = MOBS_CATEGORY, group = COPPER_GOLEM_GROUP)
+	@IntSlider(min = 0, max = 100, step = 1)
+	public int copperGolemInTrialChambersWeight = 10;
+
+	@SerialEntry()
 	@AutoGen(category = MOBS_CATEGORY, group = CRAB_GROUP)
 	@Boolean(formatter = Boolean.Formatter.YES_NO, colored = true)
 	public boolean enableCrab = true;
@@ -198,12 +208,12 @@ public final class FriendsAndFoesConfig
 	@IntSlider(min = 0, max = 180, step = 1)
 	public int illusionerInvisibilityTicks = 60;
 
-	@SerialEntry(comment = "Enable")
+	@SerialEntry()
 	@AutoGen(category = MOBS_CATEGORY, group = MAULER_GROUP)
 	@Boolean(formatter = Boolean.Formatter.YES_NO, colored = true)
 	public boolean enableMauler = true;
 
-	@SerialEntry(comment = "Enable spawn")
+	@SerialEntry()
 	@AutoGen(category = MOBS_CATEGORY, group = MAULER_GROUP)
 	@Boolean(formatter = Boolean.Formatter.YES_NO, colored = true)
 	public boolean enableMaulerSpawn = true;

@@ -22,24 +22,31 @@ public final class FriendsAndFoesStructurePoolElements
 		Identifier savannaPoolLocation = Identifier.of("minecraft:village/savanna/houses");
 		Identifier taigaPoolLocation = Identifier.of("minecraft:village/taiga/houses");
 		Identifier ancientCityCenterPoolLocation = Identifier.of("minecraft:ancient_city/city_center");
+		Identifier trialChambersCorridorPoolLocation = Identifier.of("minecraft:trial_chambers/corridor");
 
 		if (FriendsAndFoes.getConfig().generateBeekeeperAreaStructureInVillages) {
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, plainsPoolLocation, "village/plains/houses/plains_beekeeper_area", FriendsAndFoes.getConfig().beekeeperAreaStructureWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, savannaPoolLocation, "village/savanna/houses/savanna_beekeeper_area", FriendsAndFoes.getConfig().beekeeperAreaStructureWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, taigaPoolLocation, "village/taiga/houses/taiga_beekeeper_area", FriendsAndFoes.getConfig().beekeeperAreaStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, plainsPoolLocation, "village/plains/houses/plains_beekeeper_area", FriendsAndFoes.getConfig().beekeeperAreaStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, savannaPoolLocation, "village/savanna/houses/savanna_beekeeper_area", FriendsAndFoes.getConfig().beekeeperAreaStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, taigaPoolLocation, "village/taiga/houses/taiga_beekeeper_area", FriendsAndFoes.getConfig().beekeeperAreaStructureWeight);
+		}
+
+		if(FriendsAndFoes.getConfig().enableCopperGolemsInTrialChambers) {
+			StructurePoolHelper.addSingleElementToPool(templatePoolRegistry, trialChambersCorridorPoolLocation, "trial_chambers/corridor/entrance_1_copper_golem", FriendsAndFoes.getConfig().copperGolemInTrialChambersWeight);
+			StructurePoolHelper.addSingleElementToPool(templatePoolRegistry, trialChambersCorridorPoolLocation, "trial_chambers/corridor/entrance_2_copper_golem", FriendsAndFoes.getConfig().copperGolemInTrialChambersWeight);
+			StructurePoolHelper.addSingleElementToPool(templatePoolRegistry, trialChambersCorridorPoolLocation, "trial_chambers/corridor/entrance_3_copper_golem", FriendsAndFoes.getConfig().copperGolemInTrialChambersWeight);
 		}
 
 		if (FriendsAndFoes.getConfig().generateCopperGolemWorkstationStructureInVillages) {
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, plainsPoolLocation, "village/plains/houses/plains_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, desertPoolLocation, "village/desert/houses/desert_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, savannaPoolLocation, "village/savanna/houses/savanna_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, taigaPoolLocation, "village/taiga/houses/taiga_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, plainsPoolLocation, "village/plains/houses/plains_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, desertPoolLocation, "village/desert/houses/desert_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, savannaPoolLocation, "village/savanna/houses/savanna_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, taigaPoolLocation, "village/taiga/houses/taiga_copper_golem_area", FriendsAndFoes.getConfig().copperGolemWorkstationStructureWeight);
 		}
 
 		if (FriendsAndFoes.getConfig().generateCopperGolemInAncientCity) {
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, ancientCityCenterPoolLocation, "ancient_city/city_center/city_center_1", FriendsAndFoes.getConfig().copperGolemAncientCityCenterWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, ancientCityCenterPoolLocation, "ancient_city/city_center/city_center_2", FriendsAndFoes.getConfig().copperGolemAncientCityCenterWeight);
-			StructurePoolHelper.addElementToPool(templatePoolRegistry, ancientCityCenterPoolLocation, "ancient_city/city_center/city_center_3", FriendsAndFoes.getConfig().copperGolemAncientCityCenterWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, ancientCityCenterPoolLocation, "ancient_city/city_center/city_center_1", FriendsAndFoes.getConfig().copperGolemAncientCityCenterWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, ancientCityCenterPoolLocation, "ancient_city/city_center/city_center_2", FriendsAndFoes.getConfig().copperGolemAncientCityCenterWeight);
+			StructurePoolHelper.addLegacyElementToPool(templatePoolRegistry, ancientCityCenterPoolLocation, "ancient_city/city_center/city_center_3", FriendsAndFoes.getConfig().copperGolemAncientCityCenterWeight);
 		}
 	}
 

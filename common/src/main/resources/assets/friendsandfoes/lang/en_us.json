@@ -167,6 +167,8 @@
 	"yacl3.config.friendsandfoes:friendsandfoes.copperGolemWorkstationStructureWeight": "Workstation structure spawn weight",
 	"yacl3.config.friendsandfoes:friendsandfoes.generateCopperGolemInAncientCity": "Generate in the center piece in the ancient cities",
 	"yacl3.config.friendsandfoes:friendsandfoes.copperGolemAncientCityCenterWeight": "Center piece spawn weight",
+	"yacl3.config.friendsandfoes:friendsandfoes.enableCopperGolemsInTrialChambers": "Enable copper golems in trial chambers",
+	"yacl3.config.friendsandfoes:friendsandfoes.copperGolemInTrialChambersWeight": "Copper golems in trial chambers spawn weight",
 	"yacl3.config.friendsandfoes:friendsandfoes.enableCrab": "Enable",
 	"yacl3.config.friendsandfoes:friendsandfoes.enableCrabSpawn": "Enable spawn",
 	"yacl3.config.friendsandfoes:friendsandfoes.crabSpawnWeight": "Spawn weight",
