@@ -25,6 +25,7 @@ public final class IceologerSpawner implements SpecialSpawner
 	public int spawn(ServerWorld world, boolean spawnMonsters, boolean spawnAnimals) {
 		if (
 			!spawnMonsters
+			|| !FriendsAndFoes.getConfig().enableIceologer
 			|| !FriendsAndFoes.getConfig().enableIceologerSpawn
 		) {
 			return 0;

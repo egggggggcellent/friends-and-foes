@@ -2,7 +2,6 @@ package com.faboslav.friendsandfoes.common;
 
 import com.faboslav.friendsandfoes.common.api.MoobloomVariantManager;
 import com.faboslav.friendsandfoes.common.config.FriendsAndFoesConfig;
-import com.faboslav.friendsandfoes.common.config.omegaconfig.OmegaConfig;
 import com.faboslav.friendsandfoes.common.events.AddItemGroupEntriesEvent;
 import com.faboslav.friendsandfoes.common.events.entity.RegisterVillagerTradesEvent;
 import com.faboslav.friendsandfoes.common.events.item.RegisterBrewingRecipesEvent;
@@ -20,7 +19,7 @@ import org.slf4j.LoggerFactory;
 public final class FriendsAndFoes
 {
 	private static final Logger LOGGER = LoggerFactory.getLogger(FriendsAndFoes.MOD_ID);
-	private static final FriendsAndFoesConfig CONFIG = OmegaConfig.register(FriendsAndFoesConfig.class);
+	private static final FriendsAndFoesConfig CONFIG = new FriendsAndFoesConfig();
 	public static final String MOD_ID = "friendsandfoes";
 
 	public static Identifier makeID(String path) {
@@ -43,6 +42,7 @@ public final class FriendsAndFoes
 	}
 
 	public static void init() {
+		FriendsAndFoes.getConfig().load();
 		ModChecker.setupModCompat();
 
 		RegisterReloadListenerEvent.EVENT.addListener(FriendsAndFoes::registerServerDataListeners);

@@ -1,8 +1,7 @@
 package com.faboslav.friendsandfoes.neoforge;
 
-import com.faboslav.friendsandfoes.common.FriendsAndFoes;
 import com.faboslav.friendsandfoes.common.FriendsAndFoesClient;
-import com.faboslav.friendsandfoes.common.config.ConfigScreenBuilder;
+import com.faboslav.friendsandfoes.common.config.client.gui.FriendsAndFoesConfigScreen;
 import com.faboslav.friendsandfoes.common.events.client.*;
 import com.faboslav.friendsandfoes.common.events.lifecycle.ClientSetupEvent;
 import com.faboslav.friendsandfoes.common.init.FriendsAndFoesItems;
@@ -43,7 +42,7 @@ public final class FriendsAndFoesNeoForgeClient
 		event.enqueueWork(() -> {
 			if (ModList.get().isLoaded("cloth_config")) {
 				ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> (client, screen) -> {
-					return ConfigScreenBuilder.createConfigScreen(FriendsAndFoes.getConfig(), screen);
+					return new FriendsAndFoesConfigScreen(screen);
 				});
 			}
 		});

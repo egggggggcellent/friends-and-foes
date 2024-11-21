@@ -43,6 +43,9 @@ dependencies {
 	// General
 	modImplementation("net.fabricmc:fabric-loader:${prop('fabric_loader_version')}")
 	implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${prop('mixin_extras_version')}"))
+
+	// Required client
+	modImplementation(modrinth("yacl", "${prop('yacl_version')}-fabric"))
 }
 
 processResources {

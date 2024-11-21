@@ -27,6 +27,7 @@ architectury {
 }
 
 loom {
+	accessWidenerPath = project(":common:$subproject").loom.accessWidenerPath
 	silentMojangMappingsLicense()
 
 	runConfigs.all {
